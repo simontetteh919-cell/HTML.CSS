@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Dee Beauty Studio</title>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        a {
+            text-decoration: none;
+        }
+
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            padding-top: 80px; 
+            color: #333; 
+            line-height: 1.6; 
+        }
+        .container { 
+            max-width: 1100px; 
+            margin: 0 auto; 
+            padding: 0 20px; 
+        }
+        .navbar { 
+            background: #130158; 
+            color: white; 
+            position: fixed; 
+            top: 0; 
+            width: 100%; 
+            z-index: 1000; 
+            padding: 1rem 0; 
+        }
+        .navbar-top { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            max-width: 1100px; 
+            margin: 0 auto; 
+            padding: 0 20px; 
+        }
+        .brand {
+            display: flex; 
+            align-items: center; 
+            gap: 0.8rem;
+            font-size: 22px; 
+            font-weight: 700; 
+            color: white;
+        }
+
+        .brand img { 
+            height: 45px; 
+            border-radius: 5px; 
+        }
+
+        .nav-links { 
+            color: white; 
+            margin-left: 1.5rem; 
+            text-decoration: none; 
+            font-size: 14px; 
+        }
+        .active { 
+            color: #ff4757; 
+            border-bottom: 2px solid #ff4757; 
+        }
+
+        /* ABOUT SECTION */
+        .about-hero { 
+            background: #f4f6fb; 
+            padding: 5rem 0; 
+            text-align: center; 
+        }
+        .about-hero h1 { 
+            font-size: 3rem; 
+            color: #130158; 
+            margin-bottom: 1rem; 
+        }
+        
+        .content-section { 
+            padding: 5rem 0; 
+        }
+        .flex-container { 
+            display: flex; 
+            align-items: center; 
+            gap: 4rem; 
+            flex-wrap: wrap; 
+        }
+        .flex-item { 
+            flex: 1; 
+            min-width: 300px; 
+        }
+        .flex-item img { 
+            width: 100%; 
+            border-radius: 20px; 
+            box-shadow: 20px 20px 0 #130158; 
+        }
+
+        /* TEAM SECTION */
+        .team-section { 
+            background: #f9f9f9; 
+            padding: 5rem 0; 
+            text-align: center; 
+        }
+        .team-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 1rem; 
+            margin-top: 3rem; }
+        .team-card img { 
+            width: 200px;
+            height: 350px;
+            aspect-ratio: 1/1; 
+            object-fit: cover; 
+            border-radius: 40%; 
+            margin-bottom: 1rem; 
+            border: 5px solid white; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+        }
+        .team-card h4 { 
+            color: #130158; 
+            margin-bottom: 5px; 
+        }
+        .team-card p { 
+            color: #ff4757; 
+            font-weight: bold; 
+            font-size: 0.9rem; 
+        }
+
+        /* FOOTER */
+        footer { 
+            background: #130158; 
+            color: white; 
+            padding: 3rem 0; 
+            text-align: center; 
+            margin-top: 4rem; 
+        }
+        
+        @media (max-width: 768px) {
+            .about-hero h1 { 
+                font-size: 2.2rem; 
+            }
+            .flex-container { 
+                text-align: center; 
+            }
+            .flex-item img { 
+                box-shadow: 10px 10px 0 #130158; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar-top">
+            <a class="brand" href="index.html"><img src="/vid/dee beauty.png" alt="Dee Beauty Studio">Dee Beauty Studio</a>
+            <nav>
+                <a class="nav-links" href="index.html">Home</a>
+                <a class="nav-links" href="services.html">Services</a>
+                <a class="nav-links active" href="about.html">About</a>
+                <a class="nav-links" href="contact.html">Contact</a>
+                <a class="nav-links" href="account.html">Account</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-hero">
+            <div class="container">
+                <h1>Beyond the Chair</h1>
+                <p>Empowering confidence through artistry since 2020.</p>
+            </div>
+        </section>
+
+        <section class="container content-section">
+            <div class="flex-container">
+                <div class="flex-item">
+                    <img src="img/interior.jpg" alt="Our Studio Interior">
+                </div>
+                <div class="flex-item">
+                    <h2 style="color: #130158; font-size: 2.2rem; margin-bottom: 1.5rem;">The Flawless Story</h2>
+                    <p style="margin-bottom: 1rem;">Welcome to Flawless Beauty, where your unique personality meets our professional precision. In 2026, we remain dedicated to the belief that beauty is an act of self-love and self-expression.</p>
+                    <p>Our journey began with a simple goal: to provide high-quality, specialized hair and makeup services that celebrate individual style while prioritizing the health of your natural hair and skin. Today, we are proud to be the region's top choice for seamless frontal installations and luxury makeup glams.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <div class="container">
+                <h2 style="font-size: 2.2rem; color: #130158;">Meet the Artists</h2>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <img src="img/Simon.png" alt="Lead Stylist"> 
+                        <h4>Simon Tetteh</h4>
+                        <p>CEO</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="img/Simon member.png" alt="Makeup Artist"> 
+                        <h4>Bella Mensah</h4>
+                        <p>Accountant</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="img/master artist.png" alt="Lash Specialist"> 
+                        <h4>Grace Tetteh</h4>
+                        <p>Master Makeup Artist</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Flawless Beauty Studio. Designed for Excellence.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Flawless Beauty</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            min-height: 100vh; 
+            background: url(/img/img.jpg); 
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+        }
+        .signup-box { 
+            background: white; 
+            padding: 3rem; 
+            border-radius: 10px; 
+            width: 90%; 
+            max-width: 400px; 
+            text-align: center; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+        .signup-box input { 
+            width: 100%; 
+            padding: 12px; 
+            margin: 10px 0; 
+            border: 1px solid #ddd; 
+            border-radius: 5px;
+            outline: none;
+        }
+        .signup-box input:focus {
+            border-color: #130158;
+        }
+        .signup-btn { 
+            background: #ff4757; 
+            color: white; 
+            border: none; 
+            width: 100%; 
+            padding: 12px; 
+            cursor: pointer; 
+            margin-top: 10px; 
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .signup-btn:hover {
+            background: #e04050;
+        }
+        .signup-link {
+            color: #ff4757;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-box">
+        <h2 style="color: #130158; margin-bottom: 10px;">My Account</h2>
+        <p style="color: #666; margin-bottom: 20px;">Login to track your appointments</p>
+        
+        <!-- Redirects to home page on click for now -->
+        <form action="index.html" method="GET">
+            <input type="email" placeholder="Email Address" required>
+            <input type="password" placeholder="Password" required>
+            <a href="index.html"><button class="signup-btn">Sign Up</button></a>
+            
+            <p style="margin-top: 20px; font-size: 14px; color: #555;">
+                Already have an account? <a href="account.html" class="signup-link">Login</a>
+            </p>
+        </form>
+        
+        <hr style="margin: 25px 0; border: 0; border-top: 1px solid #eee;">
+        <a href="index.html" style="text-decoration: none; color: #888; font-size: 14px;">← Back to Home</a>
+    </div>
+</body>
+</html>

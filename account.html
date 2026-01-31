@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Account | Flawless Beauty</title>
+    <style>
+        /* REUSE NAVBAR STYLES */
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            display: flex; align-items: center; 
+            justify-content: center; 
+            min-height: 100vh; 
+            background: url(/img/img.jpg); 
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .login-box { 
+            background: white; 
+            padding: 3rem; 
+            border-radius: 10px; 
+            width: 100%; 
+            max-width: 400px; 
+            text-align: center; 
+        }
+        .login-box input { 
+            width: 100%; 
+            padding: 12px; 
+            margin: 10px 0; 
+            border: 1px solid #ddd; 
+        }
+        .login-btn { 
+            background: #ff4757; 
+            color: white; 
+            border: none; 
+            width: 100%; 
+            padding: 12px; 
+            cursor: pointer; 
+            margin-top: 10px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h2 style="color: #130158;">My Account</h2>
+        <p>Login to track your appointments</p>
+        <form action="index.html" method="GET">
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <a href="index.html"><button class="login-btn">Login</button></a>
+            <p style="margin-top: 15px; font-size: 14px;">New here? <a href="signup.html" style="color: #ff4757;">Create Account</a></p>
+        </form>
+        <hr style="margin: 20px 0; opacity: 0.2;">
+        <a href="index.html" style="text-decoration: none; color: #666; font-size: 14px;">← Back to Home</a>
+    </div>
+</body>
+</html>

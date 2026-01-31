@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dee Beauty Studio | 2026 Services</title>
+
+    <style>
+        /* --- GLOBAL & EXISTING STYLES --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            background-color: #ffffff; 
+            color: #333; 
+            line-height: 1.6; 
+        }
+        a { 
+            text-decoration: none; 
+            transition: 0.3s; 
+        }
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 0 20px; 
+        }
+
+        /* --- NAVBAR (Enhanced) --- */
+        .navbar { 
+            background-color: #130158; 
+            position: fixed; 
+            top: 0; 
+            width: 100%; 
+            z-index: 1000; 
+            padding: 0.8rem 0; 
+        }
+        .navbar-top { 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+        }
+        .brand { 
+            display: flex; 
+            align-items: center; 
+            gap: 0.8rem; 
+            font-size: 22px; 
+            font-weight: 700; 
+            color: white; 
+        }
+        .brand img {
+            height: 40px;
+        }
+        .nav-list { 
+            list-style: none; 
+            display: flex; 
+            gap: 1.5rem; 
+        }
+        .nav-links { 
+            color: #ffffff; 
+            font-size: 14px; 
+            font-weight: 500; 
+        }
+        .nav-links:hover {
+            color: #ff4757; 
+        }
+
+        .active { 
+            border-bottom: 2px solid #ff4757; 
+        }
+
+        /* --- HERO SECTION --- */
+        .hero-section {
+            height: 60vh;
+            background: linear-gradient(rgba(19, 1, 88, 0.7), rgba(19, 1, 88, 0.7)), url('images.unsplash.com');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin-top: 60px;
+        }
+        .hero-content h1 { 
+            font-size: 3rem; 
+            margin-bottom: 10px; 
+        }
+
+        /* --- NEW SERVICES SECTION STYLES --- */
+        .services-section { 
+            padding: 80px 0; 
+            background-color: #fcfcfc; 
+        }
+        .section-header { 
+            text-align: center; 
+            margin-bottom: 50px; 
+        }
+        .section-header h2 { 
+            font-size: 2.5rem; 
+            color: #130158; 
+            margin-bottom: 15px; 
+        }
+        .section-header p { 
+            color: #666; 
+            max-width: 600px; 
+            margin: 0 auto; 
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            border: 1px solid #eee;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(19, 1, 88, 0.1);
+        }
+
+        .service-img {
+            height: 220px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .service-info { 
+            padding: 25px; 
+        }
+        .service-info h3 { 
+            color: #130158; 
+            margin-bottom: 12px; 
+            font-size: 1.5rem; 
+        }
+        .service-info p { 
+            color: #777; 
+            font-size: 0.95rem; 
+            margin-bottom: 20px; 
+            height: 45px; 
+            overflow: hidden; 
+        }
+
+        .service-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+        }
+
+        .price-tag { 
+            color: #ff4757; 
+            font-weight: 700; 
+            font-size: 1.2rem; 
+        }
+        
+        .book-now-btn {
+            background-color: #130158;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .book-now-btn:hover { 
+            background-color: #ff4757; 
+        }
+
+        /* --- FOOTER --- */
+        .site-footer { 
+            background-color: #130158; 
+            color: white; 
+            padding: 50px 0 20px; 
+            text-align: center; 
+        }
+        .footer-bottom { 
+            margin-top: 30px; 
+            padding-top: 20px; 
+            border-top: 1px solid rgba(255,255,255,0.1); 
+            font-size: 0.8rem; 
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-list { display: none; }
+            .hero-content h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container navbar-top">
+            <a class="brand" href="index.html"><img src="/img/logo.jpeg" alt="logo">Dee Beauty Studio</a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a class="nav-links" href="index.html">Home</a></li>
+                    <li><a class="nav-links active" href="services.html">Services</a></li>
+                    <li><a class="nav-links" href="about.html">About</a></li>
+                    <li><a class="nav-links" href="contact.html">Contact</a></li>
+                    <li><a class="nav-links" href="account.html">Account</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Our Signature Services</h1>
+            <p>2026 Excellence in Beauty and Wellness</p>
+        </div>
+    </section>
+
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>The 2026 Beauty Menu</h2>
+                <p>Explore our curated list of professional treatments designed to enhance your natural glow with the latest technology and premium products.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <img src="/img/Advance hair styling.jpg" alt="Hair Styling" class="service-img">
+                    <div class="service-info">
+                        <h3>Advanced Hair Styling</h3>
+                        <p>From precision cuts to 2026 trend-setting balayage and color treatments.</p>
+                        <div class="service-footer">
+                            <span class="price-tag">&#8373;45+</span>
+                            <a href="contact.html" class="book-now-btn">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <img src="/img/Glowing Skin Therapy.jpg" alt="Facial" class="service-img">
+                    <div class="service-info">
+                        <h3>Glowing Skin Therapy</h3>
+                        <p>Customized HydraFacials and organic rejuvenation for all skin types.</p>
+                        <div class="service-footer">
+                            <span class="price-tag">&#8373;85+</span>
+                            <a href="contact.html" class="book-now-btn">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <img src="img/Bridal & Glam Makeup.jpg" alt="Makeup" class="service-img">
+                    <div class="service-info">
+                        <h3>Bridal & Glam Makeup</h3>
+                        <p>Long-lasting, high-definition makeup for your most special 2026 moments.</p>
+                        <div class="service-footer">
+                            <span class="price-tag">&#8373;120+</span>
+                            <a href="contact.html" class="book-now-btn">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <h3>Dee Beauty Studio</h3>
+            <p>Elevating Beauty Standards since 2024</p>
+            <div class="footer-bottom">
+                &copy; 2026 Dee Beauty Studio. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
